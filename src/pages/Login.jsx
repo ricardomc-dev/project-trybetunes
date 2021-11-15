@@ -9,7 +9,7 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      isDisabled: 'true',
+      isDisabled: true,
       inputName: '',
       isLoading: false,
       logged: false,
