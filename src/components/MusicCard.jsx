@@ -30,7 +30,9 @@ class MusicCard extends Component {
     const { music } = this.props;
     this.setState({ isLoading: true });
     if (checked) {
-      addSong(music).then(() => this.setState({ isLoading: false, isChecked: true }));
+      addSong(music)
+        .then(() => this.handleFavoriteSongs())
+        .then(() => this.setState({ isLoading: false, isChecked: true }));
     }
   }
 
